@@ -37,6 +37,10 @@ passport.use(
   )
 );
 
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "success" });
+})
+
 app.post("/api/user/register", (req, res) => {
   userService
     .registerUser(req.body)
